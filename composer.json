@@ -1,0 +1,26 @@
+{
+    "name": "lukasdev/pagarme",
+    "description": "Sdk para utilização da api v5 da pagarme",
+    "keywords": ["pagarme", "v5", "sdk"],
+    "homepage": "https://github.com/lukasdev/pagarme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Silva",
+            "email": "dev.lucassilva@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "dev.lucassilva@gmail.com"
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pagarme\\": "src/"
+        }
+    }
+}
