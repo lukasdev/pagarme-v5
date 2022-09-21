@@ -2,7 +2,7 @@
     "name": "lukasdev/pagarme",
     "description": "Sdk para utilização da api v5 da pagarme",
     "keywords": ["pagarme", "v5", "sdk"],
-    "homepage": "https://github.com/lukasdev/pagarme",
+    "homepage": "https://github.com/lukasdev/pagarme-v5",
     "license": "MIT",
     "authors": [
         {
