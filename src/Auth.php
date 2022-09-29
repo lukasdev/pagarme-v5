@@ -34,15 +34,14 @@
             if ($response->getStatusCode() <> 200) {
                 $output = json_decode($response->getBody()->getContents(), true);
 
-                if (isset($output['message'])) {
+                if (isset($output['errors'])) {
+                    $key = array_keys($output['errors'])[0];
+                    $message = $key.': '.array_values($output['errors'])[0][0];
+                    
+                } elseif(isset($output['message'])){
                     $message = $output['message'];
                 } else {
-                    if (isset($output['errors'])) {
-                        $key = array_keys($output['errors'])[0];
-                        $message = $key.': '.array_values($output['errors'])[0][0];
-                    } else {
-                        $message = 'Não foi possivel executar esta ação';
-                    }
+                    $message = 'Não foi possivel executar esta ação';
                 }
 
                 throw new \Exception($message, 400);
