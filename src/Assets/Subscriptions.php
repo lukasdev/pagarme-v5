@@ -16,4 +16,11 @@
             $response = $this->request('GET', $endpoint);
             return json_decode($response->getBody()->getContents());
         }
+
+        public function changeCard($subscription_id, array $data) {
+            $endpoint = 'https://api.pagar.me/core/v5/subscriptions/'.$subscription_id.'/card';
+
+            $response = $this->request('PATCH', $endpoint, $data);
+            return json_decode($response->getBody()->getContents());
+        }
     }
